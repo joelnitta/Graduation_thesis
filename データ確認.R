@@ -1,6 +1,8 @@
 # 関数の読み込み
 install.packages("tidyverse")
 library(tidyverse)
+install.packages("vegan")
+library(vegan)
 
 # データの読み込み
 COI <- read_csv("data_raw/COICustom157bp/23111007_1COICustom157bp/4_相同性が高い生物種リスト(BLAST結果10位まで).csv")
