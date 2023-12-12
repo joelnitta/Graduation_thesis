@@ -3,3 +3,16 @@ Eriksson P, Mourkas E, González-Acuna D, Olsen B, Ellström P. Evaluation and o
 
 -
   
+# リード数関連
+動物食性動物を対象とした食性解析手法
+https://doi.org/10.18960/seitai.70.1_91
+
+-
+
+# リード数関連
+植物食性動物を対象とした食性解析手法
+https://doi.org/10.18960/seitai.70.1_91
+
+-
+  
+# 

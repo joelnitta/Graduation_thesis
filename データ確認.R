@@ -44,3 +44,24 @@ trnL_tsudanuma <- select(trnL, ASV_ID, Tsudanum23_trnL, Accession_top1, Target_t
 trnL_tsudanuma %>%
   filter(Tsudanum23_trnL > 100) %>% 
   count()
+
+# 各採取地ごとに検出されたASVのリード数分布(trnL)
+
+# 津田沼
+trnL %>%
+  filter(Tsudanum23_trnL > 0) %>%   #新松戸あるいは千葉で検出されたが津田沼で検出されなかったサンプルを排除
+  ggplot(aes(x = Tsudanum23_trnL)) +
+  geom_histogram(binwidth = 100) # binの数はデフォルトで３０。いくつかの値を試してみる必要あり。
+# bin幅が100刻みになるようにbinwidthで設定
+
+# 新松戸
+trnL %>%
+  filter(Shinmats23_trnL > 0) %>%   #津田沼あるいは千葉で検出されたが新松戸で検出されなかったサンプルを排除
+  ggplot(aes(x = Shinmats23_trnL)) +
+  geom_histogram(binwidth = 100)
+
+# 千葉
+trnL %>%
+  filter(Chiba23_trnL > 0) %>%   #新松戸あるいは津田沼で検出されたが千葉で検出されなかったサンプルを排除
+  ggplot(aes(x = Chiba23_trnL)) +
+  geom_histogram(binwidth = 100)
