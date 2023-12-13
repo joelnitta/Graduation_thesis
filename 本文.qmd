@@ -35,21 +35,21 @@ editor: visual
 
 　QIAamp DNA Stoolキットのプロトコルを元に、DNA抽出を行った。
 
-1.  2mlのマイクロ遠心チューブに4mmジルコニアビーズ3粒を入れ、事前に破砕したサンプルを180mg～220mg入れる。温度上昇でDNAが分解されるのを避けるため、サンプルはできる限り氷上で扱う。
-2.  Inhibit Buffer 1.0mlを各サンプルに加え、転倒混和する。サンプルとInhibit Bufferが完全に混ざるまで、ボルテックスを用いて最高速度で1分間攪拌する。
-3.  2.の液を70℃のウォーターバスで5分間インキュベートする。チューブに水が入らないよう、パラフィルムで覆う。
-4.  3.でインキュベートしたチューブを最高速度で1分間遠心し、糞便サンプルの粒子をペレット化する。この際、上澄みに粒子が残っていればもう一度遠心を行い、固形物が上澄みの中に残らないようにする。
-5.  新しい1.5mlマイクロ遠心チューブにproteinase K 15μlを加える。
-6.  4.の上澄み液 200μlを5.のチューブに加える。
-7.  6.にBuffer AL 200μlを加え、15秒間ボルテックスで攪拌する。
-8.  7.のチューブを55℃のウォーターバスで3時間インキュベートする。インキュベート中も時々転倒混和する。
-9.  8.のチューブに99.5% ethanol 200μlを加え、ボルテックスで攪拌する。
-10. 2mlコレクションチューブにQIAamp spin columnをセットし、QIAamp spin columnの縁を濡らさないように9.のチューブの内容液600μlを垂らす。QIAamp spin columnのキャップを閉めて最高速度で1分間遠心する。遠心後、内容液がQIAamp spin columnの上に残っている場合は、QIAamp spin columnが空になるまで追加で遠心を行う。QIAamp spin columnを新しい2mlコレクションチューブに移し、ろ液の入っているチューブは廃棄する。
-11. QIAamp spin columnのキャップを慎重に開け、Buffer AW1 500μlを加える。キャップを閉めて最高速度で1分間遠心する。QIAamp spin columnを新しい2mlコレクションチューブに移し、ろ液の入っているチューブは廃棄する。
-12. QIAamp spin columnのキャップを慎重に開け、Buffer AW2 500μlを加える。キャップを閉めて最高速度で3分間遠心する。QIAamp spin columnを新しい2mlコレクションチューブに移し、ろ液の入っているチューブは廃棄する。
-13. 12.のコレクションチューブを最高速度で3分間遠心し、Buffer AW2の残りを完全に除去する。
-14. 新しい1.5mlマイクロ遠心チューブにラベリングし、13.のQIAamp spin columnを移す。QIAamp spin columnのキャップを慎重に開けてBuffer ATE 100μlを加え、室温で1分間置いたのち最高速度で1分間遠心操作を行ってDNAを溶出する。
-15. QubitとNanodropを用いてDNAの濃度と純度を測定する。得られたDNA溶液は-30℃で冷凍保管する。
+1.  2mlのマイクロ遠心チューブに4mmジルコニアビーズ3粒を入れ、事前に破砕したサンプルを180mg～220mg入れた。温度上昇でDNAが分解されるのを避けるため、サンプルはできる限り氷上で扱った。
+2.  Inhibit Buffer 1.0mlを各サンプルに加え、転倒混和した。サンプルとInhibit Bufferが完全に混ざるまで、ボルテックスを用いて最高速度で1分間攪拌した。
+3.  2.の液を70℃のウォーターバスで5分間インキュベートした。その際、チューブに水が入らないようパラフィルムで覆った。
+4.  3.でインキュベートしたチューブを最高速度で1分間遠心し、糞便サンプルの粒子をペレット化させた。
+5.  新しい1.5mlマイクロ遠心チューブにproteinase K 15μlを加えた。
+6.  4.の上澄み液 200μlを5.のチューブに加えた。
+7.  6.にBuffer AL 200μlを加え、15秒間ボルテックスで攪拌した。
+8.  7.のチューブを55℃のウォーターバスで3時間インキュベートした。インキュベート中も、時々転倒混和を行った。
+9.  8.のチューブに99.5% ethanol 200μlを加え、ボルテックスで攪拌した。
+10. 2mlコレクションチューブにQIAamp spin columnをセットし、QIAamp spin columnの縁を濡らさないように9.のチューブの内容液600μlを垂らした。QIAamp spin columnのキャップを閉めて最高速度で1分間遠心した。遠心後、内容液がQIAamp spin columnの上に残っていた場合は、QIAamp spin columnが空になるまで追加で遠心を行った。QIAamp spin columnを新しい2mlコレクションチューブに移し、ろ液の入っているチューブは廃棄した。
+11. QIAamp spin columnのキャップを慎重に開け、Buffer AW1 500μlを加えた。キャップを閉めて最高速度で1分間遠心した。QIAamp spin columnを新しい2mlコレクションチューブに移し、ろ液の入っているチューブは廃棄した。
+12. QIAamp spin columnのキャップを慎重に開け、Buffer AW2 500μlを加えた。キャップを閉めて最高速度で3分間遠心した。QIAamp spin columnを新しい2mlコレクションチューブに移し、ろ液の入っているチューブは廃棄した。
+13. 12.のコレクションチューブを最高速度で3分間遠心し、Buffer AW2の残りを完全に除去した。
+14. 新しい1.5mlマイクロ遠心チューブにラベリングし、13.のQIAamp spin columnを移した。QIAamp spin columnのキャップを慎重に開けてBuffer ATE 100μlを加え、室温で1分間置いたのち最高速度で1分間遠心操作を行ってDNAを溶出した。
+15. QubitとNanodropを用いてDNAの濃度と純度を測定した。得られたDNA溶液は-30℃で冷凍保管した。
 
 ### 2.3　PCR増幅
 
@@ -57,7 +57,7 @@ editor: visual
 
 ### 2.3.1　1stPCR
 
-　1stPCRでは、PCR組成液として2X Master Mix6.0μl、10μM 1st primers F0.24μl、10μM 1st primers R0.24μl、Template DNA1.0μl、滅菌超純水2.52μlの合計10μlを0.2mlチューブに入れる。温度条件は、95℃15分、94℃30秒、57℃90℃、72℃1分、72℃10分で行う。94℃30秒、57℃90℃、72℃1分の部分は35サイクル行う。
+　1stPCRでは、PCR組成液として2X Master Mix6.0μl、10μM 1st primers F0.24μl、10μM 1st primers R0.24μl、Template DNA1.0μl、滅菌超純水2.52μlの合計10μlを0.2mlチューブに入れた。温度条件は、95℃15分、94℃30秒、57℃90℃、72℃1分、72℃10分で行った。94℃30秒、57℃90℃、72℃1分の部分は35サイクル行った。
 
 　1stPCR後、得られた1stPCR産物を用いて電気泳動を行い、バンドが100-600bpに出ていることを確認したのち、生物技研へ発送した。
 
@@ -87,7 +87,7 @@ editor: visual
 
 　次に、Synergy H1 (Agilent Technologies)とQuantiFluor dsDNA System (Promega)を用いて、精製した溶液の濃度測定を行った。
 
-　2ndPCRでは、PCR組成液として2× PCR Buffer for KOD FX Neo 5.0μl、dNTPs(each 2 mM) 2.0μl、5μM Forward primer 0.5μl、5μM Reverse primer 0.5μl、PCR product 1.0μl、KOD FX Neo (1.0 U/uL)\[TOYOBO\] 0.2μl、Nuclease-Free Water 0.8μlの合計10μlを0.2mlチューブに入れる。温度条件は、94℃2分、98℃10秒、60℃30秒、68℃30秒、68℃2分で行う。98℃10秒、60℃30秒、68℃30秒の部分は10サイクル行う。
+　2ndPCRでは、PCR組成液として2× PCR Buffer for KOD FX Neo 5.0μl、dNTPs(each 2 mM) 2.0μl、5μM Forward primer 0.5μl、5μM Reverse primer 0.5μl、PCR product 1.0μl、KOD FX Neo (1.0 U/uL)\[TOYOBO\] 0.2μl、Nuclease-Free Water 0.8μlの合計10μlを0.2mlチューブに入れた。温度条件は、94℃2分、98℃10秒、60℃30秒、68℃30秒、68℃2分で行う。98℃10秒、60℃30秒、68℃30秒の部分は10サイクル行った。
 
 | 2ndPCR反応組成                  | 液量  |
 |:--------------------------------|:------|
@@ -103,7 +103,7 @@ editor: visual
 使用したprimerの配列は次の通りである。
 
 | プライマー名 | 塩基配列                                                           |
-|:-------------|:-------------------------------------------------------------------|
+|:---------------|:-------------------------------------------------------|
 | 2ndF         | 5'-AATGATACGGCGACCACCGAGATCTACAC-Index2- ACACTCTTTCCCTACACGACGC-3' |
 | 2ndR         | 5'-CAAGCAGAAGACGGCATACGAGAT-Index1- GTGACTGGAGTTCAGACGTGTG- 3'     |
 
