@@ -57,7 +57,9 @@ editor: visual
 
 ### 2.3.1　1stPCR
 
-　1段階目では、PCR組成液として2X Master Mix6.0μl、10μM 1st primers F0.24μl、10μM 1st primers R0.24μl、Template DNA1.0μl、滅菌超純水2.52μlの合計10μlを0.2mlチューブに入れる。温度条件は、95℃15分、94℃30秒、57℃90℃、72℃1分、72℃10分で行う。94℃30秒、57℃90℃、72℃1分の部分は35サイクル行う。
+　1stPCRでは、PCR組成液として2X Master Mix6.0μl、10μM 1st primers F0.24μl、10μM 1st primers R0.24μl、Template DNA1.0μl、滅菌超純水2.52μlの合計10μlを0.2mlチューブに入れる。温度条件は、95℃15分、94℃30秒、57℃90℃、72℃1分、72℃10分で行う。94℃30秒、57℃90℃、72℃1分の部分は35サイクル行う。
+
+　1stPCR後、得られた1stPCR産物を用いて電気泳動を行い、バンドが100-600bpに出ていることを確認したのち、生物技研へ発送した。
 
 | 1stPCR反応組成     | 液量   |
 |:-------------------|:-------|
@@ -68,17 +70,55 @@ editor: visual
 | 滅菌超純水         | 2.52μl |
 | total              | 10μl   |
 
+使用したprimerの配列は次の通りである。
+
+| プライマー名 | 塩基配列                                       |
+|:-------------|:-----------------------------------------------|
+| ZBJ-ArtF1c   | 5'-GATATTGGAACWTTATATTTTATTTTTGG-3' (Tm=60-63) |
+| ZBJ-ArtR2c   | 5'-WACTAATCAATTWCCAAATCCTCC- 3' (Tm=61-67)     |
+| trnL-c       | 5'-CGAAATCGGTAGACGCTACG-3' (Tm=64.4)           |
+| trnL-h       | 5'-CCATTGAGTCTCTGCACCTATC-3' (Tm=62.54)        |
+
 ### 2.3.2　2ndPCR
 
 　2ndPCRは株式会社生物技研に委託した。
 
-### 2.4　DNAシーケンス・塩基配列決定
+　まず、1stPCR産物に1.0×PCR溶液量のVAHTS DNA Clean Beads (Vazyme)を添加し、PCR産物を精製した。
 
-　DNAシーケンス及び塩基配列決定は株式会社生物技研に委託した。
+　次に、Synergy H1 (Agilent Technologies)とQuantiFluor dsDNA System (Promega)を用いて、精製した溶液の濃度測定を行った。
 
-### 2.5　種同定
+　2ndPCRでは、PCR組成液として2× PCR Buffer for KOD FX Neo 5.0μl、dNTPs(each 2 mM) 2.0μl、5μM Forward primer 0.5μl、5μM Reverse primer 0.5μl、PCR product 1.0μl、KOD FX Neo (1.0 U/uL)\[TOYOBO\] 0.2μl、Nuclease-Free Water 0.8μlの合計10μlを0.2mlチューブに入れる。温度条件は、94℃2分、98℃10秒、60℃30秒、68℃30秒、68℃2分で行う。98℃10秒、60℃30秒、68℃30秒の部分は10サイクル行う。
 
-　
+| 2ndPCR反応組成                  | 液量  |
+|:--------------------------------|:------|
+| 2× PCR Buffer for KOD FX Neo    | 5.0μl |
+| dNTPs(each 2 mM)                | 2.0μl |
+| 5μM Forward primer              | 0.5μl |
+| 5μM Reverse primer              | 0.5μl |
+| PCR product                     | 1.0μl |
+| KOD FX Neo (1.0 U/uL)\[TOYOBO\] | 0.2μl |
+| Nuclease-Free Water             | 0.8μl |
+| total                           | 10μl  |
+
+使用したprimerの配列は次の通りである。
+
+| プライマー名 | 塩基配列                                                           |
+|:-------------|:-------------------------------------------------------------------|
+| 2ndF         | 5'-AATGATACGGCGACCACCGAGATCTACAC-Index2- ACACTCTTTCCCTACACGACGC-3' |
+| 2ndR         | 5'-CAAGCAGAAGACGGCATACGAGAT-Index1- GTGACTGGAGTTCAGACGTGTG- 3'     |
+
+### 2.4　DNAシーケンス・塩基配列決定・種同定
+
+　DNAシーケンス及び塩基配列決定、機械的な種同定は株式会社生物技研に委託した。
+
+1.  プライマー配列に一致したリードの抽出\
+    FASTX-Toolkit (ver. 0.0.14)のfastx_barcode_splitter toolを用いて得られたリード配列の読み始めが使用したプライマー配列と完全に一致するリード配列のみを抽出した。 抽出したリードからプライマー配列と3'端の50塩基をFASTX-Toolkitのfastx_trimmerで削除した。その後、sickle (ver. 1.33)を用いて品質値が20未満の配列を取り除き、40塩基以下の長さとなった配列とそのペア配列を破棄した。
+2.  リードの結合\
+    ペアエンドリード結合スクリプトFLASH (ver. 1.2.11)を用いて、最小の重なりを10塩基の条件でリードを結合した。
+3.  Qiime2を用いた解析\
+    Qiime2 (ver. 2023.7)のdada2プラグインでキメラ配列とノイズ配列を除去した後、代表配列とASV表を出力した。取得した代表配列をNCBIのntに対し、BLASTN (ver. 2.13.0)を行い、系統推定を行った。その他のパラメーターは標準の条件で行った。
+4.  オリジナル解析\
+    Qiime2のtools exportプラグインでqzv形式のデータを閲覧可能なデータに変換した後、生物技研オリジナルプログラムによって閲覧しやすいデータに加工した(株式会社生物技研、2023)。　
 
 ## 第3章　実験結果及び考察
 
