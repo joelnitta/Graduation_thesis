@@ -1,0 +1,50 @@
+---
+title: "iNEXTパッケージを用いた解析"
+author: "加藤千尋"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r}
+# 関数の読み込み
+install.packages("tidyverse")
+library(tidyverse)
+install.packages("iNEXT")
+library(iNEXT)
+
+# データの読み込み
+COI <- read_csv("data_raw/COICustom157bp/23111007_1COICustom157bp/4_相同性が高い生物種リスト(BLAST結果10位まで).csv")
+trnL <- read_csv("data_raw/trnL-c_trnL-h-150bp/23111007_2trnL-c_trnL-h-150bp/4_相同性が高い生物種リスト(BLAST結果10位まで).csv")
+```
+
+```{r}
+# trnL、新松戸、閾値なし(リード削除なし)
+trnL_shinmatsudo_0 <-
+  trnL %>%
+  select(ASV_ID:Shinmats23_trnL) %>%
+  column_to_rownames("ASV_ID") %>%
+  iNEXT(q = 0, datatype = "abundance")
+ggiNEXT(trnL_shinmatsudo_0)
+```
+
+```{r}
+# trnL、千葉、閾値なし(リード削除なし)
+trnL_chiba_0 <-
+  trnL %>%
+  select(ASV_ID:Chiba23_trnL) %>%
+  column_to_rownames("ASV_ID") %>%
+  iNEXT(q = 0, datatype = "abundance")
+ggiNEXT(trnL_chiba_0)
+```
+
+```{r}
+# trnL、津田沼、閾値なし(リード削除なし)
+trnL_tsudanuma_0 <-
+  trnL %>%
+  select(ASV_ID:Tsudanum23_trnL) %>%
+  column_to_rownames("ASV_ID") %>%
+  iNEXT(q = 0, datatype = "abundance")
+ggiNEXT(trnL_tsudanuma_0)
+```
