@@ -15,8 +15,8 @@ install.packages("iNEXT")
 library(iNEXT)
 
 # データの読み込み
-COI <- read_csv("data_raw/COICustom157bp/23111007_1COICustom157bp/4_相同性が高い生物種リスト(BLAST結果10位まで).csv")
-trnL <- read_csv("data_raw/trnL-c_trnL-h-150bp/23111007_2trnL-c_trnL-h-150bp/4_相同性が高い生物種リスト(BLAST結果10位まで).csv")
+COI <- read_csv("data_raw/COI/4_相同性が高い生物種リスト(BLAST結果10位まで).csv")
+trnL <- read_csv("data_raw/trnL/4_相同性が高い生物種リスト(BLAST結果10位まで).csv")
 ```
 
 ```{r}
