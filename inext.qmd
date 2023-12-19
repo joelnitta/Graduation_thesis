@@ -9,9 +9,7 @@ editor_options:
 
 ```{r}
 # 関数の読み込み
-install.packages("tidyverse")
 library(tidyverse)
-install.packages("iNEXT")
 library(iNEXT)
 
 # データの読み込み
