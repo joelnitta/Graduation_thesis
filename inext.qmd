@@ -13,36 +13,28 @@ library(tidyverse)
 library(iNEXT)
 
 # データの読み込み
-COI <- read_csv("data_raw/COI/4_相同性が高い生物種リスト(BLAST結果10位まで).csv")
-trnL <- read_csv("data_raw/trnL/4_相同性が高い生物種リスト(BLAST結果10位まで).csv")
+coi_blast <- read_csv("data_raw/COI/4_相同性が高い生物種リスト(BLAST結果10位まで).csv")
+trnl_blast <- read_csv("data_raw/trnL/4_相同性が高い生物種リスト(BLAST結果10位まで).csv")
 ```
 
 ```{r}
-# trnL、新松戸、閾値なし(リード削除なし)
-trnL_shinmatsudo_0 <-
-  trnL %>%
-  select(ASV_ID:Shinmats23_trnL) %>%
-  column_to_rownames("ASV_ID") %>%
-  iNEXT(q = 0, datatype = "abundance")
-ggiNEXT(trnL_shinmatsudo_0)
-```
-
-```{r}
-# trnL、千葉、閾値なし(リード削除なし)
-trnL_chiba_0 <-
-  trnL %>%
-  select(ASV_ID:Chiba23_trnL) %>%
-  column_to_rownames("ASV_ID") %>%
-  iNEXT(q = 0, datatype = "abundance")
-ggiNEXT(trnL_chiba_0)
-```
-
-```{r}
-# trnL、津田沼、閾値なし(リード削除なし)
-trnL_tsudanuma_0 <-
-  trnL %>%
+# trnL、リード削除なし
+trnl_inext <-
+  trnl_blast %>%
   select(ASV_ID:Tsudanum23_trnL) %>%
   column_to_rownames("ASV_ID") %>%
   iNEXT(q = 0, datatype = "abundance")
-ggiNEXT(trnL_tsudanuma_0)
+ggiNEXT(trnl_inext) +
+  labs(title = "trnL")
+```
+
+```{r}
+# COI、リード削除なし
+coi_blast <-
+  coi_blast %>%
+  select(ASV_ID:Tsudanum23_ZBJ) %>%
+  column_to_rownames("ASV_ID") %>%
+  iNEXT(q = 0, datatype = "abundance")
+ggiNEXT(coi_blast) +
+  labs(title = "COI")
 ```
